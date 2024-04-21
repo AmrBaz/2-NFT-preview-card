@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&display=swap');
+body {
+    margin: 20px;
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--Very-dark-blue-main);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%); /*(main BG)*/
+    --Very-dark-blue-card-bg: hsl(216, 50%, 16%); /*(card BG)*/
+    --Very-dark-blue-line: hsl(215, 32%, 27%); /*(line)*/
+    --White: hsl(0, 0%, 100%);
+    --main-transition: 0.4s;
+}
+hr {
+    margin: 10px 0;
+}
+/* .welcome {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+.welcome h2 {
+    direction: rtl;
+    font-family: "Cairo", sans-serif;
+} */
+/******************************************************************/
+main .container {
+    background-color: var(--Very-dark-blue-card-bg);
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 15px;
+}
+@media (max-width: 375px) {
+    main .container {
+        width: 300px;
+    }
+    main .container .main-img img {
+        width: 270px;
+    }
+}
+@media (min-width: 375px) and (max-width: 500px){
+    main .container {
+        width: 350px;
+    }
+    main .container .main-img img {
+        max-width: 320px;
+    }
+}
+.container .main-img img {
+    max-width: 450px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.container .main-img {
+    position: relative;
+    transition: var(--main-transition);
+}
+.container .main-img .icon-view {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.container .main-img:hover .icon-view {
+    display: block;
+}
+.container .main-img:hover img {
+    cursor: pointer;
+    background-color: var(--Cyan);
+    opacity: 0.5;
+}
+main .container .info h2 {
+    color: var(--White);
+    margin-bottom: 10px;
+    transition: var(--main-transition);
+}
+main .container .info h2:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+main .container .info p {
+    font-size: 18px;
+    color: var(--Soft-blue);
+    margin-bottom: 20px;
+}
+main .container .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+main .container .details .ethereum,
+main .container .details .clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .container .details .ethereum span {
+    margin-left: 5px;
+    color: var(--Cyan);
+}
+main .container .details .clock span {
+    margin-left: 5px;
+    color: var(--Soft-blue);
+}
+main .container hr {
+    border: none;
+    height: 1px;
+    background-color: var(--Very-dark-blue-line);
+}
+main .container footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+}
+main .container footer img {
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+main .container footer p {
+    color: var(--Soft-blue);
+    margin-left: 15px;
+}
+main .container footer span {
+    color: var(--White);
+    transition: var(--main-transition);
+}
+main .container footer span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
